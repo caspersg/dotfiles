@@ -4,4 +4,5 @@ Including:
 - vim
 - neovim
 - zsh
-- kmonad
+- git
+- kmonad https://github.com/kmonad/kmonad
