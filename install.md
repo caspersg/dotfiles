@@ -104,7 +104,7 @@ but I want home row mods and layers too
 
 https://precondition.github.io/home-row-mods
 
-Replace CAPS with ESC and CTRL too
+Replace CAPS with ESC, but not CTRL
 
 And add a layer for symbols with the space bar
 
@@ -141,14 +141,11 @@ tail -f /var/logs/org.caspersg.kmonad.log
 ### win
 
 kmonad
-download binary
-https://github.com/kmonad/kmonad/releases
-copy kbd file to kmonad dir
-add shortcut to kmonad binary calling with kbd file
-eg ...\Documents\kmonad\kmonad-0.4.1-win.exe ...\Documents\kmonad\home_row_mods_win.kbd
-add shortcut to dir given by win+r shell:startup
 
-This does CAPS to ESC as well, but no CTRL
+add shortcut to kmonad binary calling with kbd file
+\\wsl$\Ubuntu-22.04\home\naedyr\.dotfiles\keyboard\kmonad-0.4.2-win.exe \\wsl$\Ubuntu-22.04\home\naedyr\.dotfiles\keyboard\home_row_mods_win.kbd
+
+add shortcut to dir given by win+r shell:startup
 
 # open links in neovim from iterm2
 
