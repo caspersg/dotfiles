@@ -1,31 +1,20 @@
 #!/bin/bash
 ############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/vimrc
+# This script creates symlinks from the home directory to any desired dotfiles
 ############################
 
-########## Variables
+# assumes zsh
+ln -s $PWD/zsh/.zsh_aliases ~/.zsh_aliases
+ln -s $PWD/zsh/.zsh_init ~/.zsh_init
+ln -s $PWD/zsh/.zsh_theme ~/.zsh_theme
+ln -s $PWD/zsh/.p10k.zsh ~/.p10k.zsh
 
-dir=~/vimrc # dotfiles directory
-olddir=~/vimrc_old # old dotfiles backup directory
-files="vimrc vim" # list of files/folders to symlink in homedir
+ln -s $PWD/git/.gitmessage ~/.gitmessage
+# ln -s $PWD/git/.gitconfig ~/.gitconfig
 
-##########
+ln -s $PWD/vim/.vimrc ~/.vimrc
+mkdir -p ~/.config
+ln -s $PWD/nvim ~/.config/nvim
 
-# create dotfiles_old in homedir
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
+$PWD/git/git_aliases.sh
 
-# change to the dotfiles directory
-echo "Changing to the $dir directory"
-cd $dir
-echo "...done"
-
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
-for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/vimrc_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
-done
