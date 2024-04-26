@@ -1,5 +1,11 @@
 # install
+./install.sh
 
+## kmonad
+steps below
+
+# manual install
+## macos
 brew install neovim
 
 brew install ripgrep
@@ -119,8 +125,18 @@ Make sure that iokit-name matches keyboard name in macos, eg "CK530"
 
 sudo kmonad -l debug home_row_mods_macos.kbd
 
-TODO get running on startup
-launcd?
+##### setup as startup service
+Modify org.caspersg.kmonad.plist to have the correct paths
+
+```bash
+cd /Library/LaunchDaemons
+sudo cp ~/.dotfiles/keyboard/org.caspersg.kmonad.plist .
+sudo launchctl load /Library/LaunchDaemons/org.caspersg.kmonad.plist
+sudo launchctl start org.caspersg.kmonad
+sudo launchctl list | grep casper
+# should show status 0
+tail -f /var/logs/org.caspersg.kmonad.log
+```
 
 ### win
 
