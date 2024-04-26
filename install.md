@@ -147,6 +147,12 @@ add shortcut to kmonad binary calling with kbd file
 
 add shortcut to dir given by win+r shell:startup
 
+#### fix for holding layer key outputing original key after delay
+Search for "Set up Filter Keys",
+"Set up Repeat Keys and Slow Keys"
+Turn on repeat, set wait time to max (2seconds), for both settings
+This at least makes it wait 2seconds before outputting the original key
+
 # open links in neovim from iterm2
 
 https://gist.github.com/rpapallas/31dfdf0626d078a357fccd46cdf6eafd
