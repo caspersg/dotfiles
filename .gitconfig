@@ -1,0 +1,28 @@
+[user]
+	email = cszymiczek-graley@zendesk.com
+	name = Casper Szymiczek-Graley
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+	autocrlf = input
+	whitespace = trailing-space,space-before-tab,blank-at-eol,tab-in-indent
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true
+[push]
+	default = simple
+[merge]
+	tool = p4mergetool
+	conflictstyle = diff3
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = p4mergetool
+	renameLimit = 999999
+	noprefix = true
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $REMOTE $LOCAL
