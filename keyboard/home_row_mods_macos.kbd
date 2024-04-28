@@ -16,6 +16,13 @@
   fallthrough true
 )
 
+(defalias
+  ;; previous app always toggles back one
+  p_app M-tab
+  ;; next app cycles through apps
+  n_app M-S-tab
+)
+
 ;; below here should be the same on macos and win
 
 (defsrc
@@ -32,6 +39,7 @@
     ctl_d (tap-hold-next-release 200 d lctl)
     sft_f (tap-hold-next-release 200 f lsft)
 
+;; just use space for symbols layer
 ;;    sym_g (tap-hold-next-release 2000 g (layer-toggle symbols))
 ;;    sym_h (tap-hold-next-release 2000 h (layer-toggle symbols))
 
@@ -44,7 +52,8 @@
 
     sym_s (tap-hold-next-release 5000 spc (layer-toggle symbols))
 
-    ;;n_tab (lctl tab)
+    n_tab C-tab
+    p_tab C-S-tab
 )
 
 ;; this is the base layer
@@ -69,6 +78,6 @@
     grv     1        2        3        4        5      6      7        8        9        0       -    =    bspc
     lsft    _        _        _        _        _      home   pgdn     pgup     end      _       _    _    ret
     KeyEsc  lmet     lalt     lctl     lsft     5      left   down     up       right    _       _    ret
-    tab     _        _        _        _        _      _      _        _        _        _       bspc
+    tab     _        _        _        _        _      @p_tab @p_app   @n_app   @n_tab   _       bspc
     lctl    lmet     lalt                       spc                    ralt     rmet     cmp     rctl
 )
