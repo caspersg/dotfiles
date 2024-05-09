@@ -139,7 +139,7 @@ return {
     local servers = {
       -- Ruby
       solargraph = {},
-      ruby_ls = {},
+      ruby_lsp = {},
       rubocop = {},
 
       -- Python
