@@ -109,3 +109,11 @@ ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 
 . "$HOME/.asdf/asdf.sh"
+
+
+# go (
+export GOPATH=$(asdf where golang)/packages
+export GOBIN=$(asdf where golang)/bin
+export GOROOT=$(asdf where golang)/go
+export PATH="${PATH}:${GOBIN}"
+# go )

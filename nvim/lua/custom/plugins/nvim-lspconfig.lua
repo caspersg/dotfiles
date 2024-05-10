@@ -159,8 +159,12 @@ return {
       -- Java
       -- java_language_server = {}, using lua/custom/plugins/java.lua instead
 
+      -- f# fsharp
+      fantomas = {},
+      fsautocomplete = {},
+
       -- clangd = {},
-      -- gopls = {},
+      gopls = {},
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
