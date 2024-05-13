@@ -45,11 +45,12 @@ vim.keymap.set("n", "<S-u>", ":redo<CR>", { desc = "redo" })
 --    alternate file: C-^
 --    back: C-o
 --    forward: C-i
---  marks:
+--  marks: https://github.com/chentoast/marks.nvim
 --    local: m a
 --    global: m A
 --    goto: '
 --    delete all: leader md
+--    toggle mark: m;
 --
 --  lsp:
 --    goto: leader g
