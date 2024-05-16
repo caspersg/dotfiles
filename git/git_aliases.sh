@@ -25,8 +25,15 @@ git config --global alias.st "stash"
 git config --global alias.sp "stash pop"
 git config --global alias.pu "--set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
 
+git config --global rerere.enabled true
+git config --global rebase.autoStash true
+git config --global pull.rebase true
+git config --global push.default current
+
+
 git config --global core.editor nvim
 
+git config --global diff.colorMoved zebra
 # git config --global mergetool.fugitive.cmd 'nvim -f -c "Gvdiffsplit!" "$MERGED"'
 # git config merge.conflictstyle diff3
 # git config --global merge.tool fugitive
