@@ -10,6 +10,8 @@ vim.keymap.set("n", "<C-s>", ":w<CR>", { desc = "[s]ave buffer" })
 
 vim.keymap.set("n", "<leader>mda", ":delm! | delm A-Z<CR>", { desc = "[m]arks [d]elete [a]ll" })
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "[p]aste keep register", noremap = true })
+vim.keymap.set("n", "<leader>yf", ":let @+ = expand('%p')<CR>", { desc = "[y]ank current [f]ile relative" })
+vim.keymap.set("n", "<leader>yF", ":let @+ = expand('%:p')<CR>", { desc = "[y]ank current [F]ile absolute" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "[b]uffer [d]elete" })
 vim.keymap.set("n", "<leader>bfd", ":bd!<CR>", { desc = "[b]uffer [f]orce [d]elete " })
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "[b]uffer [n]ext" })
