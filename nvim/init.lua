@@ -179,6 +179,13 @@ vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- For recall, to save global marks per project
+vim.opt.exrc = true
+vim.opt.secure = true
+-- /path/to/your/project/.nvim.lua:
+vim.opt.shadafile = ".vim/project.shada"
+-- Always add .vim to ~/.config/git/ignore
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [d]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [d]iagnostic message" })
