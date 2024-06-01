@@ -11,6 +11,7 @@ mv ~/.gitmessage ~/.gitmessage.bak
 mv ~/.vimrc ~/.vimrc.bak
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.editorconfig ~/.editorconfig.bak
+mv ~/.gitignore ~/.gitignore.bak
 
 # assumes zsh
 ln -s "$(pwd)/zsh/.zsh_aliases" ~/.zsh_aliases
@@ -23,9 +24,10 @@ ln -s "$(pwd)/git/.gitmessage" ~/.gitmessage
 
 ln -s "$(pwd)/vim/.vimrc" ~/.vimrc
 mkdir -p ~/.config
-ln -s "$(pwd)/nvim" ~/.config/nvim
+ln -s "$(pwd)/nvim" ~/.config/
 
 ln -s "$(pwd)/.editorconfig" ~/.editorconfig
+ln -s "$(pwd)/.gitignore" ~/.gitignore
 
 $(pwd)/git/git_aliases.sh
 

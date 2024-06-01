@@ -42,3 +42,4 @@ git config --global merge.tool nvimdiff
 git config --global mergetool.keepBackup false
 
 git config --global commit.template ~/.gitmessage
+git config --global core.excludesFile '~/.gitignore'
