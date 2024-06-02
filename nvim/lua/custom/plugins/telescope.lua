@@ -54,7 +54,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
         -- },
         -- sorting_strategy = "descending",
         -- selection_strategy = "closest",
-        initial_mode = "normal",
+        initial_mode = "insert",
         wrap_results = true,
         layout_config = {
           horizontal = { width = 0.95, height = 0.95, preview_width = 80 },
@@ -76,6 +76,12 @@ return { -- Fuzzy Finder (files, lsp, etc)
           initial_mode = "insert",
         },
         live_grep = {
+          initial_mode = "insert",
+        },
+        current_buffer_fuzzy = {
+          initial_mode = "insert",
+        },
+        help = {
           initial_mode = "insert",
         },
         buffers = {
