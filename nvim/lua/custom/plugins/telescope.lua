@@ -78,6 +78,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
         live_grep = {
           initial_mode = "insert",
         },
+        buffers = {
+          initial_mode = "insert",
+        },
       },
       extensions = {
         ["ui-select"] = {
