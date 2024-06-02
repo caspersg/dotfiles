@@ -37,7 +37,9 @@ return {
       ["<leader>rt"] = { name = "[r]un [t]est", _ = "which_key_ignore" },
       ["<leader>l"] = { name = "[l]sp", _ = "which_key_ignore" },
       ["<leader>ls"] = { name = "[l]sp [s]ymbol", _ = "which_key_ignore" },
-      ["<leader>h"] = { name = "[h]arpoon", _ = "which_key_ignore" },
+      ["<leader>p"] = { name = "[p]aste substitute", _ = "which_key_ignore" },
+      ["<leader>y"] = { name = "[y]ank", _ = "which_key_ignore" },
+      -- ["<leader>h"] = { name = "[h]arpoon", _ = "which_key_ignore" },
     })
   end,
 }
