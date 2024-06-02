@@ -18,7 +18,8 @@ return { -- Autoformat
         },
       },
 
-      wshada = vim.fn.has("nvim-0.10") == 0,
+      -- wshada = vim.fn.has("nvim-0.10") == 0,
+      wshada = true,
     })
 
     local recall = require("recall")
