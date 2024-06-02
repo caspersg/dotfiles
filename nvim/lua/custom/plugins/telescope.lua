@@ -87,6 +87,15 @@ return { -- Fuzzy Finder (files, lsp, etc)
         buffers = {
           initial_mode = "insert",
         },
+        marks = {
+          -- probably only works in 0.10
+          attach_mappings = function(prompt_bufnr, map)
+            map("n", "dd", function()
+              require("telescope.actions").delete_mark(prompt_bufnr)
+            end)
+            return true -- Keep default mappings as well as the custom ones
+          end,
+        },
       },
       extensions = {
         ["ui-select"] = {
