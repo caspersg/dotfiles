@@ -26,7 +26,7 @@ return {
       ["<leader>c"] = { name = "[c]ode", _ = "which_key_ignore" },
       ["<leader>d"] = { name = "[d]ebug/diff/document", _ = "which_key_ignore" },
       ["<leader>s"] = { name = "[s]earch", _ = "which_key_ignore" },
-      ["<leader>w"] = { name = "[w]orkspace", _ = "which_key_ignore" },
+      -- ["<leader>w"] = { name = "[w]orkspace", _ = "which_key_ignore" },
       ["<leader>b"] = { name = "[b]uffer", _ = "which_key_ignore" },
       ["<leader>bf"] = { name = "[b]uffer [f]orce", _ = "which_key_ignore" },
       ["<leader>m"] = { name = "[m]arks", _ = "which_key_ignore" },
