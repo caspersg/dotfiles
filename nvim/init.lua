@@ -461,3 +461,5 @@ require("custom/config/keymaps")
 -- has semantic highlighting
 -- vim.cmd.colorscheme("catppuccin")
 vim.cmd.colorscheme("tokyodark")
+-- hard code visual mode
+vim.api.nvim_set_hl(0, "Visual", { bg = "#333333" })
