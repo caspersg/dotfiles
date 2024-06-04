@@ -162,7 +162,7 @@ vim.opt.scrolloff = 10
 
 -- spelling spell check
 vim.opt.spelllang = "en_us"
-vim.opt.spell = false
+vim.opt.spell = true
 
 -- auto reload buffer
 vim.o.autoread = true
