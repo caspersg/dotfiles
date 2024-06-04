@@ -153,6 +153,7 @@ return {
       -- Typescript
       eslint = {},
       tsserver = {},
+      jsonls = {},
 
       -- Rust
       rust_analyzer = {},
