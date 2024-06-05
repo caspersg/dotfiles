@@ -136,7 +136,8 @@ return {
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-    local servers = {
+
+    local work_servers = {
       -- Ruby
       solargraph = {},
       ruby_lsp = {},
@@ -149,6 +150,61 @@ return {
       debugpy = {},
       ruff = {},
       ruff_lsp = {},
+
+      -- Typescript
+      eslint = {},
+      tsserver = {},
+      jsonls = {},
+
+      -- Rust
+      -- rust_analyzer = {},
+      -- Java
+      -- java_language_server = {}, using lua/custom/plugins/java.lua instead
+
+      -- f# fsharp
+      -- fantomas = {},
+      -- fsautocomplete = {},
+
+      -- clangd = {},
+      -- gopls = {},
+      -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+      --
+      -- Some languages (like typescript) have entire language plugins that can be useful:
+      --    https://github.com/pmizio/typescript-tools.nvim
+      --
+      -- But for many setups, the LSP (`tsserver`) will work just fine
+      -- tsserver = {},
+      --
+
+      lua_ls = {
+        -- cmd = {...},
+        -- filetypes { ...},
+        -- capabilities = {},
+        settings = {
+          Lua = {
+            completion = {
+              callSnippet = "Replace",
+            },
+            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+            -- diagnostics = { disable = { 'missing-fields' } },
+          },
+        },
+      },
+    }
+
+    local home_servers = {
+      -- Ruby
+      -- solargraph = {},
+      -- ruby_lsp = {},
+      -- rubocop = {},
+
+      -- Python
+      pyright = {},
+      -- basedpyright = {},
+      -- mypy = {},
+      -- debugpy = {},
+      -- ruff = {},
+      -- ruff_lsp = {},
 
       -- Typescript
       eslint = {},
@@ -191,6 +247,13 @@ return {
         },
       },
     }
+
+    -- default to work config
+    local neovim_config = os.getenv("NEOVIM_CONFIG")
+    local servers = work_servers
+    if neovim_config == "home" then
+      servers = home_servers
+    end
 
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install

@@ -107,9 +107,7 @@ ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 # zle -N znt-history-widget
 # bindkey "^H" znt-history-widget
 
-
 . "$HOME/.asdf/asdf.sh"
-
 
 # go (
 export GOPATH=$(asdf where golang)/packages
