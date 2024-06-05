@@ -166,11 +166,6 @@ vim.opt.spell = true
 
 -- auto reload buffer
 vim.o.autoread = true
--- vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
-vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
-  command = "if mode() != 'c' | checktime | endif",
-  pattern = { "*" },
-})
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
