@@ -253,6 +253,9 @@ return {
     local servers = work_servers
     if neovim_config == "home" then
       servers = home_servers
+      print("Using home config")
+    else
+      print("Using work config")
     end
 
     -- Ensure the servers and tools above are installed
