@@ -172,6 +172,9 @@ vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
   pattern = { "*" },
 })
 
+-- search into subfolders
+vim.opt.path = vim.opt.path + "**"
+
 -- use ; for command mode, far more common than next search
 vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
 vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
