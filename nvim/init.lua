@@ -172,6 +172,12 @@ vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained" }, {
   pattern = { "*" },
 })
 
+-- use ; for command mode, far more common than next search
+vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
+vim.api.nvim_set_keymap("n", ";", ":", { noremap = true })
+vim.api.nvim_set_keymap("v", ":", ";", { noremap = true })
+vim.api.nvim_set_keymap("v", ":", ";", { noremap = true })
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 

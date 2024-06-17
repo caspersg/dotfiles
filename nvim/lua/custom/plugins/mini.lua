@@ -38,7 +38,7 @@ return { -- Collection of various small independent plugins/modules
     -- require("mini.files").setup()
     -- vim.keymap.set("n", "<leader>mf", ":lua MiniFiles.open()<CR>", { desc = "[m]mini [f]files" })
 
-    require("mini.jump").setup()
+    -- require("mini.jump").setup()
 
     require("mini.splitjoin").setup()
   end,
