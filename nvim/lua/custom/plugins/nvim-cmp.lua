@@ -86,8 +86,7 @@ return { -- Autocompletion
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
--- TODO: enable copilot
-        -- { name = "copilot" },
+        { name = "copilot" },
       },
       formatting = {
         expandable_indicator = false,
