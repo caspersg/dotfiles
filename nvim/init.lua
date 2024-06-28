@@ -254,6 +254,9 @@ require("lazy").setup({
 -- run all my other configs
 require("custom/config/keymaps")
 
+-- diff behaviour that could turn into a plugin
+require("custom/config/diff")
+
 -- set theme
 --
 -- example code to show sematnic highlighting

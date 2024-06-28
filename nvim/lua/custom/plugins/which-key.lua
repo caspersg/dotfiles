@@ -39,6 +39,8 @@ return {
       ["<leader>ls"] = { name = "[l]sp [s]ymbol", _ = "which_key_ignore" },
       ["<leader>p"] = { name = "[p]aste substitute", _ = "which_key_ignore" },
       ["<leader>y"] = { name = "[y]ank", _ = "which_key_ignore" },
+      ["<leader>df"] = { name = "[d]iff [f]iletype", _ = "which_key_ignore" },
+      ["<leader>f"] = { name = "[f]iletype", _ = "which_key_ignore" },
       -- ["<leader>h"] = { name = "[h]arpoon", _ = "which_key_ignore" },
     })
   end,
