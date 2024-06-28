@@ -85,6 +85,15 @@ end
 vim.api.nvim_create_user_command("SplitAndDiff", SplitAndDiff, {})
 vim.keymap.set("n", "<leader>ds", "<Cmd>lua SplitAndDiff()<CR>", { desc = "[d]iff a [s]plit of 2 new buffers" })
 
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "[l]sp [f]ormat" })
+
+vim.keymap.set("n", "<leader>frb", ":set filetype=ruby<CR>", { desc = "set [f]iletype [r]u[b]y" })
+vim.keymap.set("n", "<leader>fpy", ":set filetype=python<CR>", { desc = "set [f]iletype [p][y]thon" })
+vim.keymap.set("n", "<leader>fjs", ":set filetype=javascript<CR>", { desc = "set [f]iletype [j]ava[s]cript" })
+vim.keymap.set("n", "<leader>fts", ":set filetype=typescript<CR>", { desc = "set [f]iletype [t]ype[s]cript" })
+vim.keymap.set("n", "<leader>fjo", ":set filetype=json<CR>", { desc = "set [f]iletype [j]s[o]n" })
+vim.keymap.set("n", "<leader>fjv", ":set filetype=java<CR>", { desc = "set [f]iletype [j]a[v]a" })
+
 -- custom keymaps )
 
 -- notes (
