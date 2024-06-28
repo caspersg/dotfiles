@@ -76,6 +76,15 @@ vim.keymap.set("n", "<leader>cs", "z=", { desc = "[c]ode [s]pell check fix" })
 
 vim.keymap.set("n", "<S-u>", ":redo<CR>", { desc = "redo" })
 
+-- diff some text in two new buffers
+function SplitAndDiff()
+  vim.cmd("enew")
+  vim.cmd("new")
+  vim.cmd("windo diffthis")
+end
+vim.api.nvim_create_user_command("SplitAndDiff", SplitAndDiff, {})
+vim.keymap.set("n", "<leader>ds", "<Cmd>lua SplitAndDiff()<CR>", { desc = "[d]iff a [s]plit of 2 new buffers" })
+
 -- custom keymaps )
 
 -- notes (
