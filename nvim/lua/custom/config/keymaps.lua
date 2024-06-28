@@ -53,6 +53,7 @@ vim.keymap.set("n", "<leader>bfd", ":bd!<CR>", { desc = "[b]uffer [f]orce [d]ele
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "[b]uffer [n]ext" })
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "[b]uffer [p]previous" })
 vim.keymap.set("n", "<leader>ba", ":enew<CR>", { desc = "[b]uffer [a]ppend" })
+vim.keymap.set("n", "<leader>bc", ":%bd|e#|bd#<CR>", { desc = "[b]uffer delete all except [c]urrent" })
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "move visual block up" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "move visual block down" })
